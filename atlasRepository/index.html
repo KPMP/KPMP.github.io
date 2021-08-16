@@ -21,6 +21,7 @@
 				<section class="row">
 					<div class="col-12">
 						<h3> Overview</h3>
+						The Kidney Tissue Atlas Repository is intended to allow our users to search for and download data provided to us by our Tissue Interrogation Sites. In many cases, this data is the raw data, however, this also includes some more processed data as well as a limited set of clinical data. Not all of the data provided in the Atlas Repository is available to everyone, however. There is a set of controlled data that requires users to fill out a Data Use Agreement before they are allowed access.
 					</div>			
 				</section>
 				<section class="row pt-3">
@@ -37,8 +38,24 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td></td>
-								<td></td>
+								<td><a href="https://github.com/KPMP/portal-ui">portal-ui</a></td>
+								<td>This was originally forked from the GDC Data Portal. We have since made modifications to brand it and make it functional for our use.</td>
+							</tr>
+							<tr>
+								<td>knowledge-environment (private repository)</td>
+								<td>Contains schema for the data stores used in the Repository and Explorer</td>
+							</tr>
+							<tr>
+								<td><a href="https://github.com/KPMP/atlas-index-creation-worker">atlas-index-creation-worker</a></td>
+								<td>The index creation worker will create the necessary ES indices needed for the repository from the data stored in the KE database</td>
+							</tr>
+							<tr>
+								<td><a href="https://github.com/KPMP/atlas-file-service">atlas-file-service</a></td>
+								<td>Handles file downloads for the repository</td>
+							</tr>
+							<tr>
+								<td><a href="https://github.com/KPMP/heavens-docker">heavens-docker</a></td>
+								<td>This repository holds all of the docker containers and docker-compose scripts for running our applications</td>
 							</tr>
 						</tbody>
 					</table>
@@ -46,6 +63,29 @@
 				<section class="row pt-3">
 					<div class="col-12"><h3>Data Stores</h3></div>
 					<div class="col-12">
+						<h5>MariaDB</h5>
+						<div class="row pt-2">
+							<div class="col-12">
+								We use a MariaDB instance to store the data required to generate the ElasticSearch indices which feed the application.
+								This database also holds information used to feed the Explorer. The database is constantly evolving, and the best place to find information on the structure is in the knowledge-environment repository.
+							</div>
+						</div>
+					</div>
+					<div class="col-12 pt-3">
+						<h5>ElasticSearch</h5>
+						<div class="row pt-2">
+							<div class="col-12">
+								The ElasticSearch indexes to feed the application are evolving quickly. The best place to find information on the structure is in the knowledge-environment repository.
+							</div>
+						</div>
+					</div>
+					<div class="col-12 pt-3">
+						<h5>AWS S3 Bucket</h5>
+						<div class="row pt-2">
+							<div class="col-12">
+								The files available for download from the Atlas Repository are stored in a private S3 bucket.
+							</div>
+						</div>
 					</div>
 				</section>
 			</div>

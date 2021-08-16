@@ -37,8 +37,20 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td></td>
-								<td></td>
+								<td><a href="https://github.com/KPMP/pegasus-web">pegasus-web</a></td>
+								<td>The GUI layer for the Atlas Explorer</td>
+							</tr>
+							<tr>
+								<td><a href="https://github.com/KPMP/pegasus-data">pegasus-data</a></td>
+								<td>The service layer for the Atlas Explorer</td>
+							</tr>
+							<tr>
+								<td><a href="https://github.com/KPMP/heavens-docker">heavens-docker</a></td>
+								<td>This repository holds all of the docker containers and docker-compose scripts for running our applications</td>
+							</tr>
+							<tr>
+								<td>knowledge-environment (private repository)</td>
+								<td>Contains schema for the data stores used in the Repository and Explorer</td>
 							</tr>
 						</tbody>
 					</table>
@@ -46,6 +58,13 @@
 				<section class="row pt-3">
 					<div class="col-12"><h3>Data Stores</h3></div>
 					<div class="col-12">
+						<h5>MariaDB</h5>
+						<div class="row pt-2">
+							<div class="col-12">
+								We use a MariaDB instance to store the data required to generate the ElasticSearch indices which feed the application.
+								This database also holds information used to feed the Explorer. The database is constantly evolving, and the best place to find information on the structure is in the knowledge-environment repository.
+							</div>
+						</div>
 					</div>
 				</section>
 			</div>
