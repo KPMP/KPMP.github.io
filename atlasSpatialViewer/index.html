@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="../index.css" rel="stylesheet">   
+	</head>
+	<body>
+		<div id="root">
+			<div class="container">
+				<nav id="navbar" class="px-1 py-1 fixed-top navbar">
+					<div class="col-sm-6">
+						<a class="navbar-header" href="/">
+							<a class="d-flex align-items-center navbar-brand">
+								<img src="../img/logo.png" alt="Kidney Precision Medicine Project Applications" class="logo">
+								<span class="ml-2 text-dark">KPMP Applications: Spatial Viewer</span>
+							</a>
+						</a>
+					</div>
+				</nav>
+			</div>
+			<div class="container pb-3 pt-3">
+				<section class="row">
+					<div class="col-12">
+						<h3>Overview</h3>
+					</div>			
+				</section>
+				<section class="row pt-3">
+					<div class="col-12 pb-2">
+						<h3>Repositories</h3>
+						List of the repositories required to run this application.
+					</div>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th scope="col">Repository</th>
+								<th scope="col">Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="https://github.com/KPMP/hubble-web">hubble-web</a></td>
+								<td>The GUI layer for the Atlas Spatial Viewer</td>
+							</tr>
+							<tr>
+								<td><a href="https://github.com/KPMP/pegasus-data">pegasus-data</a></td>
+								<td>The service layer for the Atlas Spatial Viewer</td>
+							</tr>
+							<tr>
+								<td><a href="https://github.com/KPMP/heavens-docker">heavens-docker</a></td>
+								<td>This repository holds all of the Docker containers and docker-compose scripts for running our applications</td>
+							</tr>
+							<tr>
+								<td>knowledge-environment (private repository)</td>
+								<td>Contains schema DTDs for the data stores used in the Atlas Repository, Explorer, and Spatial Viewer</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section class="row pt-3">
+					<div class="col-12"><h3>Data Stores</h3></div>
+					<div class="col-12">
+						<h5>S3</h5>
+						<div class="row pt-2">
+							<div class="col-12">
+								We store our ome-tiffs, which are generated from tiffs in our processing pipeline, in an S3 bucket. This bucket title is "kpmp-knowledge-environment" and is structured using package IDs.
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		<div id="footer" class="fixed-bottom px-1 py-1"><a class="text-light small" href="https://kpmp.org" target="_blank" rel="noopener noreferrer">© Kidney Precision Medicine Project</a></div>
+	</body>
+</html>
